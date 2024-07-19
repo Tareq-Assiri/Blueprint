@@ -104,9 +104,6 @@ action:
                   - condition: state
                     entity_id: !input printer_status
                     state: finish
-                  - condition: state
-                    entity_id: !input printer_status
-                    state: offline
             sequence:
               - service: light.turn_on
                 data:
