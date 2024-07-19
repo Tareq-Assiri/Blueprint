@@ -102,44 +102,6 @@ action:
               - condition: or
                 conditions:
                   - condition: state
-                    entity_id: !input printer_status
-                    state: finish
-            sequence:
-              - service: light.turn_on
-                data:
-                  rgb_color:
-                    - 0
-                    - 255
-                    - 0
-                  brightness: 255
-                  effect: Solid
-                target:
-                  device_id:
-                    !input wled_lights
-                alias: Turn on Wled to green
-              - delay:
-                  hours: 0
-                  minutes: 5
-                  seconds: 0
-                  milliseconds: 0
-              - service: light.turn_on
-                data:
-                  rgb_color:
-                    - 255
-                    - 255
-                    - 255
-                  brightness: 255
-                  effect: Solid
-                target:
-                  device_id: !input wled_lights
-                alias: Turn on Wled to white
-
-        alias: Do we need to set color to green?
-      - choose:
-          - conditions:
-              - condition: or
-                conditions:
-                  - condition: state
                     entity_id: !input printer_stage
                     state: auto_bed_leveling
             sequence:
