@@ -128,6 +128,10 @@ action:
                   - condition: state
                     entity_id: !input printer_stage
                     state: heating_hotend
+                  - condition: state
+                    entity_id: !input printer_stage
+                    state: cleaning_nozzle_tip
+                    alias: Cleaning Nozzle Tip
             sequence:
               - service: light.turn_on
                 data:
