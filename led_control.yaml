@@ -2,7 +2,7 @@ blueprint:
   name: Bambu Lab WLED Controller
   description: Control one or more WLED lights with Bambu 3d printer
   domain: automation
-  source_url: https://github.com/greghesp/ha-bambulab/blob/main/blueprints/wled_controller.yaml
+  source_url: https://github.com/Tareq-Assiri/Blueprint/blob/b2f4d15f5cd3f0cb0e8302e47e246277b873225f/led_control.yaml
   input:
     printer_status:
       name: Print Status of your Bambu Lab printer
