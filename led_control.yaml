@@ -54,24 +54,6 @@ action:
         state: "on"
         alias: chamber light is on
         entity_id: !input chamber_light
-      - condition: not
-        conditions:
-          - condition: state
-            entity_id: !input printer_stage
-            state: scanning_bed_surface
-            alias: Scanning Bed Surface
-          - condition: state
-            entity_id: !input printer_stage
-            state: cleaning_nozzle_tip
-            alias: Cleaning Nozzle Tip
-          - condition: state
-            entity_id: !input printer_stage
-            state: calibrating_extrusion
-            alias: Calibrating Extrusion
-          - condition: state
-            entity_id: !input printer_stage
-            state: calibrating_extrusion_flow
-            alias: Calibrating Extrusion Flow
     then:
       - service: light.turn_on
         data:
