@@ -104,6 +104,9 @@ action:
                   - condition: state
                     entity_id: !input printer_stage
                     state: auto_bed_leveling
+                  - condition: state
+                    entity_id: !input printer_stage
+                    state: homing_toolhead
             sequence:
               - service: light.turn_on
                 data:
