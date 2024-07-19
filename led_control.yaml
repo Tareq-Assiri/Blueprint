@@ -1,5 +1,5 @@
 blueprint:
-  name: Bambu Lab WLED Controller
+  name: P1S WLED Controller
   description: Control one or more WLED lights with Bambu 3d printer
   domain: automation
   source_url: https://github.com/Tareq-Assiri/Blueprint/blob/main/led_control.yaml
