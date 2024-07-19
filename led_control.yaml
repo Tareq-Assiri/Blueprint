@@ -72,10 +72,6 @@ action:
             entity_id: !input printer_stage
             state: calibrating_extrusion_flow
             alias: Calibrating Extrusion Flow
-          - condition: state
-            entity_id: !input printer_status
-            state: finish
-            alias: Print finished
     then:
       - service: light.turn_on
         data:
