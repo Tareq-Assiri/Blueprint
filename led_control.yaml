@@ -149,6 +149,27 @@ action:
                     !input wled_lights
                 alias: Turn on Wled to yellow
         alias: Do we need to set color to yellow?
+      - choose:
+          - conditions:
+              - condition: or
+                conditions:
+                  - condition: state
+                    entity_id: !input printer_status
+                    state: prepare
+            sequence:
+              - service: light.turn_on
+                data:
+                  rgb_color:
+                    - 160
+                    - 32
+                    - 240
+                  brightness: 255
+                  effect: solid
+                target:
+                  device_id:
+                    !input wled_lights
+                alias: Turn on Wled to purple
+        alias: Do we need to set color to purple?
     else:
       - service: light.turn_off
         data: {}
